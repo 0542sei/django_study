@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="ko">
+{% extends 'base_slider.html' %}
 
-<body>
-    <h1>피드 페이지</h1>
-<div>
-    (ID: )
-</div>
-    <a href="/users/logout/">로그아웃</a>
-</body>
-</html>
+{% block content %}
+  <div id="feeds" class="post-container">
+    {% for post in posts %}
+      {% with '#post-'|add:post.id as post_anchor %}
+        {% url 'posts:feeds' as base_url %}
+        {% include 'posts/post.html' with action_redirect_url=base_url|add:post_anchor %}
+      {% endwith %}
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,10 +1,7 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
-    {% block content %}{% endblock %}
-</body>
-</html>
+{% extends '_base.html' %}
+
+{% block base_content %}
+  {% include 'nav.html' %}
+  {% block content %}
+  {% endblock %}
+{% endblock %}

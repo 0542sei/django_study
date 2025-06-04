@@ -24,8 +24,8 @@ from config.views import index
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('users/', include('users.urls')),
-    path('posts/', include('posts.urls')),
+    path('users/', include('users.urls', namespace="users")),
+    path('posts/', include('posts.urls', namespace="posts")),
 ]
 
   # 기존에 등록된 urlpatterns에 추가 설정

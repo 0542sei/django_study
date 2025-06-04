@@ -1,8 +1,9 @@
 from django.shortcuts import redirect
+from django.urls import reverse
 
 def index(request):
     if request.user.is_authenticated:
-        return redirect("/posts/feeds/")
+        return redirect(reverse("posts:feeds"))
     else:
-        return redirect("/users/login/")
+        return redirect(reverse("users:login"))
 

@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV 'C:\Users\notebiz004\Desktop\workspaces\pystagram'
+set -gx VIRTUAL_ENV 'C:\Users\WooJi\Desktop\django_study\pystagram'
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/"Scripts $PATH
